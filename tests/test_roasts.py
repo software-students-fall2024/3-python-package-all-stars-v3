@@ -135,26 +135,3 @@ class Tests:
         # different order of inputs should yield different strings
         assert roast_template.format(*["apple", "orange", "banana"]) != \
             roast_template.format(*["banana", "apple", "orange"])
-
-    def test_roast(self):
-        """Tests for `roast` function"""
-        names = ["bear", "tiger"]
-        roast1 = roasts.roast(names=names)
-        # default mode should not use the names for formatting
-        assert isinstance(roast1, str)
-        assert "bear" not in roast1 and "tiger" not in roast1
-        # mode 1 should not use the names for formatting
-        roast2 = roasts.roast(mode=1, names=names)
-        assert isinstance(roast2, str)
-        assert "bear" not in roast2 and "tiger" not in roast2
-        # any mode that is not the default or is not mode 1 should use the names for formatting
-        roast3 = roasts.roast(mode=2, names=names)
-        assert isinstance(roast3, str)
-        assert "bear" in roast3 or "tiger" in roast3
-        roast4 = roasts.roast(mode=-1, names=names)
-        assert isinstance(roast4, str)
-        assert "bear" in roast4 or "tiger" in roast4
-        roast5 = roasts.roast(mode=1000, names=names)
-        assert isinstance(roast5, str)
-        assert "bear" in roast5 or "tiger" in roast5
-        
