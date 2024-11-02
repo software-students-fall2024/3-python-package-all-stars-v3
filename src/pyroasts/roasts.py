@@ -1,6 +1,6 @@
 """Random used to select random roasts. Importing roasts from helper file."""
 import random
-from ..helper import generic_roasts, names, roast_templates
+from .helper import generic_roasts, names, roast_templates
 
 def personal_roast(name: str, severity: int) -> str:
     """Returns a personalized roast given a name and severity level."""
@@ -77,14 +77,3 @@ def get_n_names(n=2):
 def get_roast_template():
     """Get a single random roast template from the list of roast templates"""
     return random.choice(roast_templates)
-
-def roast(mode=1, names=get_n_names(10)):
-    """Generate a roast given the desired mode of roasting selected"""
-    if mode == 1:
-        return get_roast()
-    else:
-        return get_roast_template().format(*names)
-## example for how to test these out
-# for i in range(10):
-#     print(roast(1))
-#     print(roast(2))
