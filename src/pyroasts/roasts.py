@@ -1,6 +1,6 @@
 """Random used to select random roasts. Importing roasts from helper file."""
 import random
-from helper import generic_roasts, names, roast_templates
+from ..helper import generic_roasts, names, roast_templates
 
 def personal_roast(name: str, severity: int) -> str:
     """Returns a personalized roast given a name and severity level."""
@@ -17,8 +17,8 @@ def personal_roast(name: str, severity: int) -> str:
         9: f"{name}, touch grass"
     }
     # return a default roast if severity value not found in dictionary.
-    return roasts.get(severity, f"{name}, \
-        you're so bland that even a salt shaker thinks you're boring.")
+    return roasts.get(severity, f"{name}, you're so bland that even a salt shaker thinks you're boring.")
+    
 def skill_roast(skill: str, sarcasm_level: int) -> str:
     """Returns a roast for an inputted skill and degree of sarcasm"""
     if sarcasm_level == 2:
@@ -34,35 +34,38 @@ def skill_roast(skill: str, sarcasm_level: int) -> str:
         6: f"{skill}? That makes me almost care about you."
     }
     # return a default roast if sarcasm_level not found in dictionary.
-    return roasts.get(sarcasm_level, \
-        f"Your {skill} skills are a whole new level of disappointment.")
+    return roasts.get(sarcasm_level, f"Your {skill} skills are a whole new level of disappointment.")
+
 def comparison_roast(thing1: str, thing2: str) -> str:
     """Returns a roast for choosing one thing over another."""
-    thing1 = thing1.lower().capitalize()
-    thing2 = thing2.lower()
+    # Handle empty strings
+    if not thing1 and not thing2:
+        return "Are you really comparing nothing to nothing? That's a new low."
+
+    thing1 = thing1.lower().capitalize() if thing1 else "Nothing"
+    thing2 = thing2.lower() if thing2 else "Nothing"
+    
     roasts = [
         f"{thing1} instead of {thing2}? I'd rather sit on a cactus.",
-        f"{thing1} over {thing2}? I'd rather star in a \
-            documentary called 'How Far Can the Human Body be Stretched'.",
+        f"{thing1} over {thing2}? I'd rather star in a documentary called 'How Far Can the Human Body be Stretched'.",
         f"{thing1} over {thing2}? I'd rather step on a LEGO.",
-        f"You like {thing1} better than {thing2}? Did anybody ask?",
-        f"You like {thing1} more than {thing2}? Are your parents siblings?"
+        f"{thing1} instead of {thing2}? Did anybody ask?",
+        f"{thing1} over {thing2}? Are your parents siblings?"
     ]
     # return a randomly selected roast from the list.
     return random.choice(roasts)
+
 def advice_roast(topic: str, sarcasm_level: int) -> str:
     """Returns a roast that gives sarcastic advice based on given topic and sarcasm level."""
     topic = topic.lower()
     roasts = {
-        1: f"Trying to learn {topic}? Just keep doing the bare minimum, \
-            I'm sure it'll work out... somehow.",
+        1: f"Trying to learn {topic}? Just keep doing the bare minimum, I'm sure it'll work out... somehow.",
         2: f"Your attempt at {topic} is so inspiring, it's a shame nobody's watching.",
-        3: f"Maybe if you spent half as much time on {topic} \
-            as you do scrolling on social media, you'd actually get somewhere."
+        3: f"Maybe if you spent half as much time on {topic} as you do scrolling on social media, you'd actually get somewhere."
     }
     # return a default roast if sarcasm_level not found in dictionary.
-    return roasts.get(sarcasm_level, \
-        f"You call that effort in {topic}? I've seen potatoes put in more work.")
+    return roasts.get(sarcasm_level, f"You call that effort in {topic}? I've seen potatoes put in more work.")
+
 def get_roast():
     """Get a single random roast from the list of roasts"""
     return random.choice(generic_roasts)
