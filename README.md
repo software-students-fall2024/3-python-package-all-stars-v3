@@ -18,7 +18,7 @@
 4. Run the program: `python3 my_program_filename.py`.
 5. Exit the virtual environment: exit.
 
-[Here are some coding examples:](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvYy8yZGMyOGJkODhiNWFiOTdhL0VWajBhaTlUWW1sS29Fdi1Ka2sxV3Q0QmkzVXVwZ0NvREhOWkllUXdnc3ZXaXc%5FZT1oUlJVQ08&cid=2DC28BD88B5AB97A&id=2DC28BD88B5AB97A%21s2f6af45862534a69a04bfe2649355ade&parId=2DC28BD88B5AB97A%21286&o=OneUp)
+[Here are some coding examples:](https://1drv.ms/u/c/2dc28bd88b5ab97a/EVj0ai9TYmlKoEv-Jkk1Wt4BaBvNijzNNT_uA2HD72_FcQ?e=z12wC0)
 
 ## How to set up the virtual environment, install dependencies, and build and test our package
 
