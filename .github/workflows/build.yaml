@@ -29,9 +29,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install Python, pipenv and Pipfile packages
         uses: kojoru/prepare-pipenv@v1
-      - name: Clear dist and egg-info directories
-        run: rm -rf dist/
-        run: rm -rf src/pyroasts.egg-info
       - name: Build package
         run: |
           pipenv install build
