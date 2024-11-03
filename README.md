@@ -1,4 +1,4 @@
-![Python build & test](https://github.com/software-students-fall2024/3-python-package-all-stars-v3/actions/workflows/build.yml/badge.svg)
+![Python build & test](https://github.com/software-students-fall2024/3-python-package-all-stars-v3/actions/workflows/build.yaml/badge.svg)
 
 # Python Roast Package 
 
@@ -24,8 +24,8 @@ https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvYy8yZGMyOGJkODhiNWFiOT
 ## How to set up the virtual environment, install dependencies, and build and test our package
 
 1. If you haven't already, install `pipenv` using the command: `pip install pipenv`
-2. Activate the virtual environment: `pipenv shell`.
-3. Install all the dependencies listed in the `Pipfile`: `pipenv install`
+2. Install all the dependencies listed in the `Pipfile`: `pipenv install`
+3. Activate the virtual environment: `pipenv shell`.
 4. Run all the tests: `pytest` or `python3 -m pytest`.
 5. Exit the virtual environment
 
