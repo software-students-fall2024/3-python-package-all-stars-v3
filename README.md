@@ -1,4 +1,4 @@
-![Python build & test](https://github.com/software-students-fall2024/3-python-package-all-stars-v3/actions/workflows/event-logger.yml/badge.svg)
+![Python build & test](https://github.com/software-students-fall2024/3-python-package-all-stars-v3/actions/workflows/build.yml/badge.svg)
 
 # Python Roast Package 
 
