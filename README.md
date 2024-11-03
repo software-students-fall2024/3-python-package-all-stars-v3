@@ -8,7 +8,7 @@
 
 ## Link to package
 
-- This is the Link to the our group's package page: [pyroasts](https://pypi.org/project/pyroasts/)
+- This is the Link to our group's package page: [pyroasts](https://pypi.org/project/pyroasts/)
 
 ## How to install and use this package
 
